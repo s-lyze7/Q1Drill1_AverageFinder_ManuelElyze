@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>My Basic Info</title>
+    <style>
+        body {
+            font-family: Gill Sans, sans-serif;
+            color: white;
+            background-color: #90d1a2;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 50px;
+            margin-top: 30px;
+            backdrop-filter: blur(30%);
+        }
+
+        .btn-custom {
+            background-color: #658a6e;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Average Finder</h1>
+
+                    <label for="scr1">Score 1:</label>
+                    <input type="number" id="scr1" class="form-control" placeholder="Enter your Score">
+        <br>
+                    <label for="scr2">Score 2:</label>
+                    <input type="number" id="scr2" class="form-control" placeholder="Enter your Score">
+        <br>
+                <button type="submit" class="btn btn-custom" py-click="compute_average">Compute Average</button>
+        <br><br>
+
+        <h4>Result:</h4>
+
+        <p>Average <span id="average">:</span></p>
+        <p>Passed? <span id="sagot">:</span></p>
+        
+        <script type="py" src="main.py"></script>
+    </div>
+</body>
+</html>
